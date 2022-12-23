@@ -33,6 +33,9 @@ public class Startup
         services.AddControllers();
         services.AddEndpointsApiExplorer();
         services.AddSwaggerGen();
+        services.AddAuthentication();
+        services.ConfigureIdentity();
+        services.ConfigureJWT(Configuration);
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,6 +60,8 @@ public class Startup
         app.UseRouting();
         app.UseAuthorization();
         app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
+        app.UseAuthentication();
+        app.UseAuthorization();
     }
 
     public class MappingProfile : Profile
@@ -66,6 +71,7 @@ public class Startup
             CreateMap<Company, CompanyDto>().ForMember(c => c.FullAddress, opt => opt.MapFrom(x => string.Join(' ', x.Address, x.Country)));
             CreateMap<CarShop, CarShopDto>();
             CreateMap<Car, CarDto>();
+            CreateMap<UserForRegistrationDto, User>();
         }
     }
 }
