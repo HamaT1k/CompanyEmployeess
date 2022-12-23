@@ -14,5 +14,11 @@ namespace Repository
         public CarRepository(RepositoryContext repositoryContext) : base(repositoryContext)
         {
         }
+
+
+        public IEnumerable<Car> GetAllCars(bool trackChanges) =>
+     FindAll(trackChanges)
+         .OrderBy(c => c.CarName)
+         .ToList();
     }
 }
