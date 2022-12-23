@@ -3,11 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompanyEmployeess", "CompanyEmployeess\CompanyEmployeess.csproj", "{63B4C870-43F0-4AB0-936C-CA1A4E6CE162}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompanyEmployeess", "CompanyEmployeess\CompanyEmployeess.csproj", "{63B4C870-43F0-4AB0-936C-CA1A4E6CE162}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Contracts\Contracts.csproj", "{C91BD330-217D-4462-A5F4-FA58664376F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Contracts", "Contracts\Contracts.csproj", "{C91BD330-217D-4462-A5F4-FA58664376F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggerService", "LoggerService\LoggerService.csproj", "{83CE8D23-4E9D-4255-A2B7-8859AF8E4EF7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggerService", "LoggerService\LoggerService.csproj", "{83CE8D23-4E9D-4255-A2B7-8859AF8E4EF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{7D58A5A4-FDE1-45B1-8336-DC9E8783664C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entities", "Entities\Entities.csproj", "{86E66D5B-1F85-4DB0-A659-28C718E5ED64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +31,14 @@ Global
 		{83CE8D23-4E9D-4255-A2B7-8859AF8E4EF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83CE8D23-4E9D-4255-A2B7-8859AF8E4EF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83CE8D23-4E9D-4255-A2B7-8859AF8E4EF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D58A5A4-FDE1-45B1-8336-DC9E8783664C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D58A5A4-FDE1-45B1-8336-DC9E8783664C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D58A5A4-FDE1-45B1-8336-DC9E8783664C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D58A5A4-FDE1-45B1-8336-DC9E8783664C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86E66D5B-1F85-4DB0-A659-28C718E5ED64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86E66D5B-1F85-4DB0-A659-28C718E5ED64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86E66D5B-1F85-4DB0-A659-28C718E5ED64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86E66D5B-1F85-4DB0-A659-28C718E5ED64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
