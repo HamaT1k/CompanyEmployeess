@@ -3,19 +3,22 @@ using Contracts;
 using Entities.DataTransferObjects;
 using LoggerService;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Data;
 
-namespace CompanyEmployees.Controllers
+namespace CompanyEmployeess.Controllers
 {
-    [ApiVersion("1.0")]
-    [Route("api/{v:apiversion}/companies")]
+    [ApiVersion("2.0", Deprecated = true)]
+    [Route("api/{v:apiversion}/carShops")]
     [ApiController]
-    public class CompaniesController : ControllerBase
+    public class CarShopsController : ControllerBase
     {
         private readonly IRepositoryManager _repository;
         private readonly ILoggerManager _logger;
         private readonly IMapper _mapper;
-        public CompaniesController(IRepositoryManager repository, ILoggerManager logger, IMapper mapper)
+        public CarShopsController(IRepositoryManager repository, ILoggerManager logger, IMapper mapper)
+
         {
             _repository = repository;
             _logger = logger;
@@ -23,15 +26,15 @@ namespace CompanyEmployees.Controllers
         }
         [HttpGet, Authorize(Roles = "Manager")]
         [HttpHead]
-        public IActionResult GetCompanies()
+        public IActionResult GetCarsShops()
         {
-                var companies = _repository.Company.GetAllCompanies(trackChanges: false);
-                var companiesDto = _mapper.Map<IEnumerable<CompanyDto>>(companies);
-                return Ok(companiesDto);
+            var carShops = _repository.CarShop.GetAllCarShops(trackChanges: false);
+            var carShopsdTO = _mapper.Map<IEnumerable<CarShopDto>>(carShops);
+            return Ok(carShopsdTO);
         }
 
         [HttpOptions]
-        public IActionResult GetCompaniesOptions()
+        public IActionResult GetCarShopsOptions()
         {
             Response.Headers.Add("Allow", "GET, OPTIONS, POST");
             return Ok();

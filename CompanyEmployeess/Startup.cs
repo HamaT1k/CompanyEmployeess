@@ -32,6 +32,7 @@ public class Startup
         services.AddAutoMapper(typeof(Startup));
         services.AddControllers();
         services.AddEndpointsApiExplorer();
+        services.ConfigureVersioning();
         services.AddSwaggerGen();
         services.AddAuthentication();
         services.ConfigureIdentity();
